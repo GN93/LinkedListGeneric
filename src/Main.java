@@ -1,24 +1,26 @@
+import linkedList.LinkedList;
+
 public class Main {
 
     public static void main(String[] args){
         LinkedList<String> myList = new LinkedList<>();
-        myList.append("Ala");
-        myList.append("Ma");
-        myList.append("Kota");
-        myList.append("Oraz");
-        myList.append("BMW");
-        myList.append("Seraii");
-        myList.append("X5");
-        myList.append("hah");
+        myList.append("One");
+        myList.append("Two");
+        myList.append("Three");
+        myList.append("Four");
+        myList.append("Five");
+        myList.append("Six");
+        myList.append("Seven");
+        myList.append(null);
 
-//        myList.display();
+        System.out.println(myList);
 
         LinkedList<Integer> myIntList = new LinkedList<>();
         myIntList.append(1);
         myIntList.append(2);
         myIntList.append(144);
         myIntList.append(1997);
-//        myIntList.display();
+        System.out.println(myIntList);
 
         LinkedList<Double> myDoubleList = new LinkedList<>();
         myDoubleList.append(5.22);

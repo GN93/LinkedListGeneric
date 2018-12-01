@@ -1,10 +1,12 @@
+package linkedList;
+
 public class LinkedList<T> {
 
-    private LinkedListNode head;
-    private LinkedListNode tail;
+    private LinkedListNode<T> head;
+    private LinkedListNode<T> tail;
 
     public LinkedList() {
-        this.head = new LinkedListNode();
+        this.head = new LinkedListNode<>();
     }
 
     public void append(T value){
@@ -17,7 +19,7 @@ public class LinkedList<T> {
             else{
                 tail = tail.getNextNode();
                 tail.setValue(value);
-                tail.setNextNode(new LinkedListNode());
+                tail.setNextNode(new LinkedListNode<>());
             }
         }
     }
@@ -31,19 +33,6 @@ public class LinkedList<T> {
         }
     }
 
-    @Override
-    public String toString() {
-        LinkedListNode node = head;
-        StringBuilder str = new StringBuilder("Objects in LinkedList: ");
-
-        while(node.getNextNode() != null){
-            str.append(node.getValue() + ", ");
-            node = node.getNextNode();
-        }
-
-        return str.toString();
-    }
-
     public boolean contains (T searchedValue){
         LinkedListNode node = head;
 
@@ -52,6 +41,19 @@ public class LinkedList<T> {
             node = node.getNextNode();
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        LinkedListNode node = head;
+        StringBuilder str = new StringBuilder("Objects in linkedList.LinkedList: ");
+
+        while(node.getNextNode() != null){
+            str.append(node.getValue()).append(", ");
+            node = node.getNextNode();
+        }
+
+        return str.toString();
     }
 
 
